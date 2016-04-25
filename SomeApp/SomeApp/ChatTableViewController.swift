@@ -1,7 +1,7 @@
 import UIKit
+import SomeAppCore
 
 class ChatTableViewController: UITableViewController {
-
   var messages = [String]()
   
   override func viewDidLoad() {
@@ -11,8 +11,6 @@ class ChatTableViewController: UITableViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-  
-  // MARK: - Table view data source
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
