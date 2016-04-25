@@ -1,11 +1,3 @@
-//
-//  SomeAppTests.swift
-//  SomeAppTests
-//
-//  Created by Christoph Gockel on 23/04/2016.
-//  Copyright © 2016 8th Light. All rights reserved.
-//
-
 import XCTest
 @testable import SomeApp
 
