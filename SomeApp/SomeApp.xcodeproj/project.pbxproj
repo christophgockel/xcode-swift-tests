@@ -33,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		59D418BD1CCE0ECA000608C3 /* SomeAppCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SomeAppCore.framework; path = "../SomeAppCore/build/Debug-iphoneos/SomeAppCore.framework"; sourceTree = "<group>"; };
+		59E4E1751CCE68DA00A0FA18 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		59E4E1761CCE68DA00A0FA18 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		59E4E1791CCE69B000A0FA18 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		59E4E17A1CCE69B000A0FA18 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		59F043D81CCC1DA000FDB139 /* SomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F043DB1CCC1DA000FDB139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59F043DD1CCC1DA000FDB139 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				59F043E01CCC1DA000FDB139 /* Base */,
+				59E4E1751CCE68DA00A0FA18 /* de */,
+				59E4E1791CCE69B000A0FA18 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				59F043E51CCC1DA000FDB139 /* Base */,
+				59E4E1761CCE68DA00A0FA18 /* de */,
+				59E4E17A1CCE69B000A0FA18 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

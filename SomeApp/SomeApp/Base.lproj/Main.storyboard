@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Some App-->
@@ -38,28 +39,46 @@
         <scene sceneID="pdv-J7-aYy">
             <objects>
                 <tableViewController id="RSL-E5-f7w" customClass="ConversationsTableViewController" customModule="SomeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qpE-x1-4LC">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" id="qpE-x1-4LC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversation" textLabel="KH2-ab-Bmw" rowHeight="50" style="IBUITableViewCellStyleDefault" id="jyp-uq-ZHx" customClass="ConversationTableViewCell" customModule="SomeApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="50"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversation" rowHeight="71" id="jyp-uq-ZHx" customClass="ConversationTableViewCell" customModule="SomeApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jyp-uq-ZHx" id="B5e-sq-UbD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="jyp-uq-ZHx" id="B5e-sq-UbD">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KH2-ab-Bmw">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="49"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EKN-ad-Q3D">
+                                            <rect key="frame" x="8" y="8" width="304" height="55"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="42p-l9-dJe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="55" id="d6C-nU-9C6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-gw-2Kd">
+                                                    <rect key="frame" x="60" y="0.0" width="244" height="55"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EKN-ad-Q3D" firstAttribute="trailing" secondItem="B5e-sq-UbD" secondAttribute="trailingMargin" id="1i5-c3-r6j"/>
+                                        <constraint firstItem="EKN-ad-Q3D" firstAttribute="leading" secondItem="B5e-sq-UbD" secondAttribute="leadingMargin" id="4sa-mf-cQ9"/>
+                                        <constraint firstItem="EKN-ad-Q3D" firstAttribute="top" secondItem="B5e-sq-UbD" secondAttribute="topMargin" id="PKu-5L-DSI"/>
+                                        <constraint firstItem="EKN-ad-Q3D" firstAttribute="centerY" secondItem="B5e-sq-UbD" secondAttribute="centerY" id="r5b-X4-e06"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="partner" destination="KH2-ab-Bmw" id="68t-mB-sYR"/>
+                                    <outlet property="partner" destination="g4r-gw-2Kd" id="fS9-Py-s8I"/>
+                                    <outlet property="profilePicture" destination="42p-l9-dJe" id="bsC-47-8tD"/>
                                     <segue destination="POK-8m-FvM" kind="show" identifier="ConversationToChatSegue" id="DL9-pM-mlB"/>
                                 </connections>
                             </tableViewCell>
@@ -91,13 +110,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Uk-a8-xMF">
-                                            <rect key="frame" x="8" y="9" width="242" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Uk-a8-xMF">
+                                            <rect key="frame" x="8" y="11" width="304" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0Uk-a8-xMF" firstAttribute="leading" secondItem="Q5m-XF-fIx" secondAttribute="leadingMargin" id="9MQ-L9-n74"/>
+                                        <constraint firstItem="0Uk-a8-xMF" firstAttribute="trailing" secondItem="Q5m-XF-fIx" secondAttribute="trailingMargin" id="JoA-Kn-on3"/>
+                                        <constraint firstItem="0Uk-a8-xMF" firstAttribute="centerY" secondItem="Q5m-XF-fIx" secondAttribute="centerY" id="meV-Bc-dE9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="content" destination="0Uk-a8-xMF" id="vbf-yE-9fk"/>

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0Uk-a8-xMF"; */
+"0Uk-a8-xMF.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Messages"; ObjectID = "EIq-Kr-ctD"; */
+"EIq-Kr-ctD.normalTitle" = "Nachrichten";
+
+/* Class = "UILabel"; text = "Contact Name"; ObjectID = "KH2-ab-Bmw"; */
+"KH2-ab-Bmw.text" = "Name des Kontakts";
+
+/* Class = "UINavigationItem"; title = "Some App"; ObjectID = "XCQ-ST-b18"; */
+"XCQ-ST-b18.title" = "Some App";

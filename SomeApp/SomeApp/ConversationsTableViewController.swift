@@ -26,8 +26,10 @@ class ConversationsTableViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ConversationTableViewCell
-    //    cell.partner = UILabel()
-    cell.partner.text = data.conversations[indexPath.row].contact
+    let contact = data.conversations[indexPath.row].contact
+
+    cell.partner.text = contact.name
+    cell.profilePicture.image = UIImage(named: contact.image)
     
     return cell
   }
